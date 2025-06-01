@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Sitio Web</title>
+
+    <!-- Enlace a Bootstrap desde CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Menú de navegación */
+        nav {
+            background-color: #111;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: #1abc9c;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+            transform: scale(1.1);
+        }
+
+        /* Títulos de secciones */
+        .titulo-dioses {
+            font-size: 28px;
+            color: #f39c12;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+
+        /* Estilo de los párrafos con ID y clases */
+        #descripcion {
+            font-family: 'Courier New', monospace;
+            text-align: justify;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .griego, .egipcio, .nordico {
+            font-size: 1.1em;
+            line-height: 1.5em;
+            margin-left: 20px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            line-height: 1.6em;
+        }
+
+        ul li:hover {
+            color: #f39c12;
+            cursor: pointer;
+        }
+
+        /* Modelo de caja CSS */
+        .dios-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .dios {
+            width: 30%;
+            margin: 10px;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .dios h3 {
+            text-align: center;
+            color: #f39c12;
+            margin-top: 10px;
+        }
+
+        .dios p {
+            text-align: justify;
+            font-size: 1.1em;
+        }
+
+        .imagen-dios {
+            background-color: #555;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+
+        /* Efecto hover */
+        .dios:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .dios-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .dios {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center py-4">
+        <h1>Mi Primer Sitio Web</h1>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Mitología</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#descripcion">Descripción</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#griegos">Dioses Griegos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#egipcios">Dioses Egipcios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#nordicos">Dioses Nórdicos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://es.wikipedia.org/wiki/Mitolog%C3%ADa" target="_blank">Más sobre mitología</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container mt-4">
+        <!-- Descripción -->
+        <article id="descripcion">
+            <h2 class="titulo-dioses">Descripción</h2>
+            <p id="descripcion">Este sitio web está dedicado a la mitología y los dioses de diferentes culturas. Aquí aprenderás sobre los dioses griegos, egipcios y nórdicos, sus historias y su impacto en la cultura actual.</p>
+        </article>
+
+        <!-- Dioses Griegos -->
+        <article id="griegos">
+            <h2 class="titulo-dioses">Dioses Griegos</h2>
+            <div class="dios-container">
+                <div class="dios">
+                    <div class="imagen-dios"></div>
+                    <h3>Zeus</h3>
+                    <p>Zeus es el rey del Olimpo. Gobernaba el cielo y el rayo. Era conocido por su poder y autoridad, y su figura es una de las más representadas en el arte clásico.</p>
+                </div>
+                <div class="dios">
+                    <div class="imagen-dios"></div>
+                    <h3>Atenea</h3>
+                    <p>Atenea es la diosa de la sabiduría, la estrategia y la guerra justa. Nació de la cabeza de Zeus, completamente armada, y se convirtió en una de las principales divinidades del panteón griego.</p>
+                </div>
+                <div class="dios">
+                    <div class="imagen-dios"></div>
+                    <h3>Hades</h3>
+                    <p>Hades es el dios del inframundo, encargado de gobernar sobre los muertos. Su reino era un lugar de sombras, pero no estaba relacionado con el castigo, sino con la gestión del mundo subterráneo.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Dioses Egipcios -->
+        <article id="egipcios">
+            <h2 class="titulo-dioses">Dioses Egipcios</h2>
+            <div class="dios-container">
+                <div class="dios">
+                    <div class="imagen-dios"></div>
+                    <h3>Ra</h3>
+                    <p>Ra es el dios del sol y creador del universo en la mitología egipcia. Se le representaba con cabeza de halcón y un disco solar sobre su cabeza.</p>
+                </div>
+                <div class="dios">
+                    <div class="imagen-dios"></div>
+                    <h3>Osiris</h3>
+                    <p>Osiris es el dios de la resurrección y el inframundo. Es conocido por su historia como el esposo de Isis y el padre de Horus, y su mito está relacionado con la muerte y la regeneración.</p>
+                </div>
+                <div class="dios">
+                    <div class="imagen-dios"></div>
+                    <h3>Anubis</h3>
+                    <p>Anubis es el dios de la momificación y el protector de los muertos. Se le representa con cabeza de chacal, siendo uno de los dioses más importantes en los rituales funerarios.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Dioses Nórdicos -->
+        <article id="nordicos">
+            <h2 class="titulo-dioses">Dioses Nórdicos</h2>
+            <div class="dios-container">
+                <div class="dios">
+                    <div class="imagen-dios"></div>
+                    <h3>Odin</h3>
+                    <p>Odin es el dios principal del panteón nórdico, asociado a la sabiduría, la magia y la guerra. Es conocido por sacrificar su ojo en busca de conocimiento y por su liderazgo en las batallas de los dioses.</p>
+                </div>
+                <div class="dios">
+                    <div class="imagen-dios"></div>
+                    <h3>Thor</h3>
+                    <p>Thor es el dios del trueno en la mitología nórdica, conocido por su martillo Mjölnir, con el cual protegía a los humanos y luchaba contra los gigantes.</p>
+                </div>
+                <div class="dios">
+                    <div class="imagen-dios"></div>
+                    <h3>Loki</h3>
+                    <p>Loki es el dios embaucador, conocido por su astucia y habilidad para cambiar de forma. A menudo es un aliado y enemigo de los demás dioses, causando caos y conflictos.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <aside class="container mt-5 p-4 bg-dark text-white">
+        <h3>Autor: Gabrielito</h3>
+        <p>he creado este sitio web como parte de un proyecto sobre mitología para explorar las figuras más importantes de diversas culturas antigua y mejorar en mi programacion s.</p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 Gabrielito</p>
+    </footer>
+</body>
+</html>
